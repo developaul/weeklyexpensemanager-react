@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Error } from './';
+import { validateForm } from '../helpers';
 
 const Pregunta = ({ guardarPresupuesto, guardarRestante, actualizarPregunta }) => {
     
@@ -8,17 +9,10 @@ const Pregunta = ({ guardarPresupuesto, guardarRestante, actualizarPregunta }) =
     const [ cantidad, guardarCantidad ] = useState( 0 ),
           [ error, guardarError ]       = useState( false );
 
-
-    // Valida el Formulario
-    const validateForm = event => {
-        event.preventDefault();
-        
-        if( cantidad < 1 || isNaN( cantidad ) ) {
-            guardarError( true );
-            return;
-        }
-
-        guardarError( false );
+    // Agrega la cantidad como presupuesto
+    const agregarCantidad = event => {
+        // Valida el Formulario
+        if( !validateForm( event, cantidad, guardarError ) ) return;
 
         // Establece la cantidad como presupuesto
         guardarPresupuesto( cantidad );
@@ -33,7 +27,7 @@ const Pregunta = ({ guardarPresupuesto, guardarRestante, actualizarPregunta }) =
             { error ? <Error message='El presupuesto es incorrecto' /> : null }
 
             <form
-                onSubmit={ validateForm }
+                onSubmit={ agregarCantidad }
             >
                 <input
                     className="u-full-width"
