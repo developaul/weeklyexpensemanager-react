@@ -19,7 +19,7 @@ const Listado = ({ gastos, guardarGastos, restante, guardarRestante }) => {
 
     return ( 
         <div className="gastos-realizados">
-            <h1>Listado</h1>
+            <h2>Listado</h2>
 
             {
                 gastos.map( gasto => (

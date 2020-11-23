@@ -1,3 +1,3 @@
 # Weekly Expense Manager App: React
 
-## 👨‍💻 [View Demo](https://confident-ritchie-96eec6.netlify.app/)
+## 👨‍💻 [View Demo](https://happy-edison-8ce9a3.netlify.app/)
