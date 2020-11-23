@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Pregunta, Formulario, Listado } from './components';
+import { Pregunta, Formulario, Listado, ControlPresupuesto } from './components';
 
 function App() {
 
@@ -56,6 +56,11 @@ function App() {
 										restante={ restante }
 										guardarGastos={ guardarGastos }
 										guardarRestante={ guardarRestante }
+									/>
+
+									<ControlPresupuesto
+										presupuesto={ presupuesto }
+										restante={ restante }
 									/>
 								</div>
 							</div>
