@@ -101,3 +101,14 @@ h2 {
   padding: 1rem;
   color:white;
 }
+
+.gastos-realizados li p .eliminar {
+  background-color: #da2c2c;
+  padding: 1rem;
+  color:white;
+}
+
+.gastos-realizados li p .eliminar:hover {
+  cursor: pointer;
+}
+
